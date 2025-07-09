@@ -1,56 +1,53 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #e9f5ec;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recomendador de Shampoo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Recomendador de Shampoo</h1>
 
-.container {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 100%;
-}
+    <form id="form-recomendacao">
+      <label for="tipoCabelo">Tipo de cabelo:</label>
+      <select id="tipoCabelo" required>
+        <option value="">Selecione</option>
+        <option value="Liso">Liso</option>
+        <option value="Ondulado">Ondulado</option>
+        <option value="Cacheado">Cacheado</option>
+        <option value="Crespo">Crespo</option>
+      </select>
 
-h1 {
-  text-align: center;
-  color: #2f5e4e;
-  margin-bottom: 1.5rem;
-}
+      <label for="oleosidade">Oleosidade:</label>
+      <select id="oleosidade" required>
+        <option value="">Selecione</option>
+        <option value="Normal">Normal</option>
+        <option value="Oleoso">Oleoso</option>
+        <option value="Seco">Seco</option>
+      </select>
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+      <label for="quimica">Tem química?</label>
+      <select id="quimica" required>
+        <option value="">Selecione</option>
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+      </select>
 
-select, button {
-  padding: 0.75rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
+      <label for="pintado">Cabelos pintados?</label>
+      <select id="pintado" required>
+        <option value="">Selecione</option>
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+      </select>
 
-button {
-  background-color: #2a9d8f;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-}
+      <button type="submit">Ver Shampoo</button>
+    </form>
 
-button:hover {
-  background-color: #21867a;
-}
+    <div id="resultado"></div>
+  </div>
 
-#resultado {
-  margin-top: 1.5rem;
-  font-size: 1.1rem;
-  text-align: center;
-}
+  <script src="script.js"></script>
+</body>
+</html>
